@@ -1,3 +1,8 @@
+// Initialisez EmailJS avec votre User ID
+(function(){
+    emailjs.init("AFJxHKEa2Jajo3FT6"); // Remplacez par votre User ID EmailJS
+})();
+
 document.addEventListener("DOMContentLoaded", function () {
     // Attachez un événement au bouton de soumission du formulaire
     document.getElementById("myForm").addEventListener("submit", function (event) {
@@ -11,16 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Veuillez remplir tous les champs.");
         } else {
             // Si la validation est réussie, envoyez l'e-mail avec EmailJS
-            emailjs.sendForm('service_xxxxx', 'template_xxxxx', this)
-                .then(function () {
-                    alert('Formulaire envoyé avec succès!');
-                    
-                    // Simuler l'envoi de points et rediriger vers la page de callback
-                    const pointsToConvert = 100; // Exemple de points à convertir
-                    window.location.href = `callback.html?user=${encodeURIComponent(username)}&points=${pointsToConvert}&success=true`;
-                }, function (error) {
-                    alert('Échec de l\'envoi du formulaire : ' + JSON.stringify(error));
-                });
+            emailjs.sendForm('service_ftsujwe', 'template_0001', this)
+            .then(function () {
+                alert('Formulaire envoyé avec succès!');
+                
+                // Simuler l'envoi de points et rediriger vers la page de callback
+                const pointsToConvert = 100; // Exemple de points à convertir
+                window.location.href = `callback.html?user=${encodeURIComponent(username)}&points=${pointsToConvert}&success=true`;
+            }, function (error) {
+                alert('Échec de l\'envoi du formulaire : ' + JSON.stringify(error));
+            });
         }
     });
 });
